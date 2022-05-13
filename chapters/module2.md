@@ -1,7 +1,7 @@
 ---
 title: 'Module 2: Neotoma2 Core Commands'
 description:
-  'This module will teach you how to organize your environments using conda'
+  'This module will show you the core commands of Neotoma2'
 prev: /module1
 next: /module3
 type: chapter

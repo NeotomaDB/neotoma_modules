@@ -1,7 +1,7 @@
 ---
 title: 'Module 3: Synthesis With Neotoma2 - Helper Functions'
 description:
-  'This module will teach you about Version Control and how to use Git and Github.'
+  'In this module, you will learn about the most important helper functions.'
 prev: /module2
 next: /module4
 type: chapter

@@ -2,8 +2,7 @@
 title: 'Module 5: Synthesis With Neotoma2'
 subtitle:  'Multi-site Analysis'
 description:
-  'In this module you will create, edit and run reproducible R code documents using RMarkdown.
-  '
+  'In this module we will do a more complex model using several sites.'
 prev: /module4
 next: null
 type: chapter
