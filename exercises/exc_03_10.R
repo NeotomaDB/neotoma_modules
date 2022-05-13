@@ -10,6 +10,5 @@ po_ds <- get_sites(datasettype == "pollen")
 # Download the information. Assign it to po_dl
 
 
-
 # Retrieve the chronologies
 po_dl %>% chronologies()

@@ -25,16 +25,12 @@ export default ({ data }) => {
 
                 <center>
                 <p>
-                    These short courses will teach you how to conduct reproducible 
-                    research using Data Sciences tools.  
+                    These short modules will teach you how use Neotoma2.
 
-                    You will be working with R Markdown, Docker containerization,
-                    and Git for version control.  
+                    You will be working with R Markdown and an R based Jupyter Kernel
                 </p>
                 <p>
-                    After these modules, you will be able to process your own research
-                    in a format suitable for analysis, writing your own analysis functions,
-                    and deriving data-driven insights via RMarkdown files and Jupyter Notebooks.
+                    After these modules, you will be able to do reproducible research using Neotoma2.
                 </p>
                 </center>
                 </div>

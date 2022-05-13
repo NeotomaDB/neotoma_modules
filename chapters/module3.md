@@ -162,7 +162,7 @@ Peek through the chronologies of a downloads object.
 
 Retrieve datasets which datasettype is pollen. Then get the chronologies.
 
-<codeblock id="03_09">
+<codeblock id="03_10">
 
 Use `get_datsets()` first.
 Are you using the `datasettype` argument?
@@ -197,6 +197,20 @@ Feel free to use the `dplyr` package to modify the table
 </exercise>
 
 <exercise id="6" title="filter()">
+
+Sometimes a large number of records is taken. Then, some analysis is done but we need only a subset of the records.
+For example, we may want to select all sites in a region, and then subset those by dataset type.  If we want to look at only the pollen datasets from Czech Republic, we can start with the set of records returned from our `get_datasets()` query, and then use the `filter` function to select only those datasets that are pollen.
+
+See it in action:
+
+![img](https://github.com/NeotomaDB/neotoma_workshop/blob/main/static/module3/taxa.gif?raw=true)
+
+The `filter()` function takes as the first argument, a `sites` object, followed by the criteria we want to use to filter. 
+`filter()` is inspired by the power of `dplyr::filter()` function and can filter by any element that exists within a `sites` object.
+
+
+
+As you could see, `filter()` works with boolean operators: `<`, `>` or `==`, `!=`. Datasettype has to be of type string, while the other terms must be numeric.  If you need to filter by the same argument, let's say, you need to filter "geochronologic" and "pollen datatypes, then you will also make use of `&` and `|` operators.
 
 
 </exercise>
