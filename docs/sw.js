@@ -26,7 +26,7 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-8eca9a6cd854214c9b6a.js"
+    "url": "webpack-runtime-bc8796f2f8c4edcd9967.js"
   },
   {
     "url": "styles.b49841eb0c2f62cb3dd3.css"
@@ -50,14 +50,14 @@ self.__precacheManifest = [
     "url": "e6d6ed13-bab39835ca1e382a1a59.js"
   },
   {
-    "url": "app-ccd6cabd9886cd9e956e.js"
+    "url": "app-df418eca1816469c56bb.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-15096bed533ed0ff8b58.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "d73c06e7ec5ddc15cc0842ba6acdb8fd"
+    "revision": "6c4ef0e4ad1d670f59ddd3c872073a0e"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
@@ -65,14 +65,14 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "80bad73c5fed3cacf9533cfaa66b4186"
+    "revision": "2971db77b15b8add2967208cff6147cd"
   },
   {
     "url": "polyfill-404a8fe84b9b126210e7.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "04dd972978055276e45dc7de1a405e50"
+    "revision": "d0542498f768586f585efc8cb895c7e7"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
@@ -91,12 +91,12 @@ const { NavigationRoute } = workbox.routing
 
 const navigationRoute = new NavigationRoute(async ({ event }) => {
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/ec-workshops`), ``)
+  pathname = pathname.replace(new RegExp(`^/neotoma_workshop`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/ec-workshops/app-ccd6cabd9886cd9e956e.js`))) {
+  if (!resources || !(await caches.match(`/neotoma_workshop/app-df418eca1816469c56bb.js`))) {
     return await fetch(event.request)
   }
 
@@ -109,7 +109,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/ec-workshops/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/neotoma_workshop/offline-plugin-app-shell-fallback/index.html`
   return await caches.match(offlineShell)
 })
 
