@@ -14,6 +14,8 @@ id: 2
 
 </slides>
 
+</exercise>
+
 <exercise id="1" title="get_sites()">
 
 #### Sites
@@ -167,6 +169,13 @@ To create the GeoJson coordinates bounding box use this [site](https://geojson.i
 
 <exercise id="3" title="get_downloads()">
 
-complete record
+The `get_downloads()` command gets the most detailed information of a `site`. It contains data on: `sites`, `collection units`, `analysis units`, `samples`, `datasets`, `taxonomic data`, and `chronologies`. The only argument that it takes is the `datasetid` or a `sites` object obtained via `get_sites()` or `get_datasets()`
+
+![gif](https://github.com/NeotomaDB/neotoma_workshop/blob/main/static/module2/downloads1.gif?raw=true)
+
+After obtaining a `get_downloads()` result, a typical next step is to create subsets of data for for intended analyses. For these analysis we will usually work with some extra helper functions that will be reviewed in the next module. 
+In the following example, we use the `samples()` helper function.
+
+![gif](https://github.com/NeotomaDB/neotoma_workshop/blob/main/static/module2/downloads.gif?raw=true)
 
 </exercise>

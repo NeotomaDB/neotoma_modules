@@ -16,6 +16,7 @@ cz <-'{"type": "Polygon",
 cz_sf <- geojsonsf::geojson_sf(cz)
 
 # Choose a datasettype and pass the location
-cz_ds <- get_datasets(datasettype == ______, loc = _____)
+cz_ds <- get_datasets(datasettype = ______, loc = _____)
 
-cz_ds
+# We will discuss the datasets() function in the next module
+cz_ds %>% datasets()
