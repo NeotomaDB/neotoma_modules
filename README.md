@@ -1,13 +1,10 @@
 # EarthCube Workshops
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/throughput-ec/ec-workshops/binder)
-
-[![example workflow](https://github.com/throughput-ec/ec-workshops/actions/workflows/gatsby-publish.yaml/badge.svg)](https://github.com/throughput-ec/ec-workshops/actions)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/NeotomaDB/neotoma_workshop/binder)
 
 ## Objective
 
-This project aims to show some powerful use cases of Data Science tools in the Earth Sciences. 
-You can view the different modules deployed at  [site](https://throughput-ec.github.io/ec-workshops/)
+Learn how to use the Neotoma2 R package [here](http://open.neotomadb.org/neotoma_workshop/)
 
 ## Contributors
 
@@ -25,15 +22,15 @@ All products of the Mid Project are licensed under an [MIT License](LICENSE) unl
 
 ## How to use this repository
 
-Simply go to the deployed version at [link]().
+Simply go to the deployed version at [link](http://open.neotomadb.org/neotoma_workshop/).
 
-If you would like to run this repository from your local directory, you can follow these [instructions]().
+If you would like to create your own course, follow this [tutorial](https://ines.github.io/course-starter-python/).
 
 Files and directory structure in the repository are as follows:
 This structure might be modified as the project progresses.
 
 ```bash
-ec-workshops
+neotoma-workshop
 ├── .gitignore          # Files you change on your local that you do not want to track changes for or commit to the repo. 
 ├── LICENSE             # Terms able to use this platform 
 ├── README.md           # Documentation and Description 

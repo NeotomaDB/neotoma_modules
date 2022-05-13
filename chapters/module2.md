@@ -8,6 +8,13 @@ type: chapter
 id: 2
 ---
 
+<exercise id="0" title="Introduction" type="slides">
+
+<slides source="chapter2_01_introduction">
+
+</slides>
+
+</exercise>
 
 <exercise id="1" title="get_sites()">
 
