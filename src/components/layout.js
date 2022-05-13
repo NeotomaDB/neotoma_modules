@@ -65,7 +65,7 @@ const Layout = ({ isHome, title, description, children }) => {
                                         <H3>About EarthCube</H3>
                                         {meta.showProfileImage && (
                                             <img
-                                                src="https://github.com/throughput-ec/ec-workshops/blob/main/static/profile.jpg?raw=true"
+                                                src="https://raw.githubusercontent.com/NeotomaDB/neotoma_workshop/main/static/profile.png"
                                                 alt=""
                                                 className={classes.profile}
                                             />

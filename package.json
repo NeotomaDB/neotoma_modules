@@ -1,7 +1,7 @@
 {
-    "name": "ec-workshops",
+    "name": "neotoma2-workshops",
     "private": true,
-    "description": "Earthcube workshops regarding DS tools",
+    "description": "Neotoma2 Workshops",
     "version": "0.0.1",
     "homepage": "https://throughput-ec.github.io/ec-workshops",
     "author": {
@@ -58,7 +58,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://throughput-ec.github.io/ec-workshops/"
+        "url": "http://open.neotomadb.org/neotoma_workshop/"
     },
-    "bugs": "https://throughput-ec.github.io/ec-workshops/issues"
+    "bugs": "https://github.com/NeotomaDB/neotoma_workshop/issues"
 }
