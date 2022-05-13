@@ -1,5 +1,5 @@
 # Load libraries
-suppressMessages(library(neotoma2)
+suppressMessages(library(neotoma2))
 
 # Get a site
 site <- get_sites(45)
