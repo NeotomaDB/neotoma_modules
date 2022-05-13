@@ -145,10 +145,53 @@ If you ever get an empty table, consider applying `get_downloads()` to your `sit
 
 The `chronologies()` function obtains chronology data from a record(s) and returns results as a list. Same as the `samples()` function, it will only yield appropriate results when applied to a `sites` object obtained via `get_downloads()`
 
+See it in action!
+
+![img](https://github.com/NeotomaDB/neotoma_workshop/blob/main/static/module3/chronologies.gif?raw=true)
+
+Try it yourself!
+
+<codeblock id="03_09">
+
+Peek through the chronologies of a downloads object.
+
+</codeblock>
+
+
+#### Exercise
+
+Retrieve datasets which datasettype is pollen. Then get the chronologies.
+
+<codeblock id="03_09">
+
+Use `get_datsets()` first.
+Are you using the `datasettype` argument?
+Are you using `chronologies` on a `get_downloads` obtained `sites` object?
+
+</codeblock>
 
 </exercise>
 
 <exercise id="5" title="taxa()">
+
+The `taxa()` function helps create a dataframe of all sampleunits. It differes from the `samples()` function in that _____
+. 
+
+
+The dataframe approach allows to use **R**'s *dplyr* library to manipulate to convert into a wide count dataframe.
+This way, the researcher can apply the code that best suits their needs.
+
+![img](https://github.com/NeotomaDB/neotoma_workshop/blob/main/static/module3/taxa.gif?raw=true)
+
+Your turn!
+
+<codeblock id="03_11">
+
+Peek through the taxa.
+
+Feel free to use the `dplyr` package to modify the table
+
+</codeblock>
 
 
 </exercise>
