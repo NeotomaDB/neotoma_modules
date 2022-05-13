@@ -1,5 +1,6 @@
 # Load libraries
 suppressMessages(library(neotoma2))
+options(warn=-1)
 
 # Location Polygon 
 cz <-'{"type": "Polygon",
@@ -19,4 +20,6 @@ cz_ds <- get_datasets(datasettype = "pollen", loc = cz)
 
 # We will discuss the samples() function in the next module
 cz_dl <- cz_ds %>% get_downloads() %>% samples()
+
+# It will not display great. Try to run it in an Rmd file instead for more clarity
 cz_dl
