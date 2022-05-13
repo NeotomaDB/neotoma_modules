@@ -8,9 +8,15 @@ type: chapter
 id: 3
 ---
 
-<exercise id="1" title="Helper Functions">
+<exercise id="0" title="Helper Functions">
 
 Main helper functions
+
+</exercise>
+
+<exercise id="1" title="filter()">
+
+#### Filtering Records
 
 </exercise>
 
