@@ -48,6 +48,22 @@ Change the __ for a vector of number
 
 </codeblock>
 
+The metadata yielded by `get_sites()` is
+
+- siteid
+- sitename
+- altitude
+- geography
+- sitedescription
+- collectionunits
+  - collectionunitid
+  - collectionunit
+  - handle
+  - collectionunittype
+  - datasets
+    - datasetid
+    - datasettype
+
 ### Searching by Name
 
 You can also search for a record by using its name; for this, you need to use the argument `sitename=`.
@@ -164,7 +180,32 @@ To capture all results it is best practice to loop through results, using `limit
 
 To create the GeoJson coordinates bounding box use this [site](https://geojson.io/), or you can use pre-existing objects within R, for example, country-level data within the `spData` package.
 
-
+The complete metadata obtained from a `get_datasets()` call is:
+- site
+  - siteid
+  - sitename
+  - sitedescription
+  - sitenotes
+  - geography
+  - altitude
+  - collection unit
+    - collectionunitid
+    - collectionunit
+    - handle
+    - unittype
+    - datasets
+      - doi
+      - agerange
+        - units
+        - ageold
+        - ageyoung
+      - database
+      - datasetid
+      - datasetpi
+        - contactid
+        - contactname
+      - datasettype
+      - datasetnotes
 </exercise>
 
 <exercise id="3" title="get_downloads()">
@@ -184,4 +225,88 @@ Try it out!
 
 </codeblock>
 
+`get_downloads()` yields the maximum level of detail, including:
+- site
+  - area
+  - notes
+  - siteid
+  - altitude
+  - sitename
+  - geography
+  - geopolitical
+  - collectionunit
+    - notes
+    - handle
+    - colldate
+    - location
+    - waterdepth
+    - gpslocation
+    - collunittype
+    - collectionunit
+    - collectiondevice
+    - collectionunitid
+    - depositionalenvironment
+    - dataset
+      - doi
+      - agerange
+        - units
+        - ageold
+        - ageyoung
+      - database
+      - datasetid
+      - datasetpi
+      - datasetname
+      - datasettype
+      - datasetnotes
+      - samples
+        - ages
+          - age
+          - agetype
+          - ageolder
+          - ageyounger
+          - chronologyid
+          - chronologyname
+        - igsn
+        - datum
+          - units
+          - value
+          - context
+          - element
+          - taxonid
+          - symmetry
+          - taxongroup
+          - elementtype
+          - variablename
+          - ecologicalgroup
+      - chronologies
+        - chronology
+          - chronologyid
+          - chroncontrols
+            - depth
+            - geochron
+            - agetype
+            - delta13c
+            - delta15n
+            - infinite
+            - percentc
+            - percentn
+            - labnumber
+            - reservoir
+            - geochronid
+            - geochronage
+            - geochrontyp
+            - geochronnotes
+            - percentcollagen
+            - radiocarbonmethod
+            - geochronerrorolder
+            - geochronerroryounger
+            - geochronmaterialdated
+          - thickness
+          - agelimitolder
+          - chroncontrolid
+          - agelimityounger
+          - chroncontrolage
+          - chroncontroltype
+        - defaultchronology
+        
 </exercise>
