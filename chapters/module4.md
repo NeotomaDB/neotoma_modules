@@ -1,5 +1,5 @@
 ---
-title: 'Module 4: Synthesis With Neotoma2'
+title: 'Module 4: Synthesis With Neotoma2 I'
 subtitle:  'Age-Depth Models'
 description:
   'This module will go through a simple age model workflow.'

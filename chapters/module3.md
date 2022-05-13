@@ -1,5 +1,5 @@
 ---
-title: 'Module 3: Synthesis With Neotoma2 - Helper Functions'
+title: 'Module 3: Helper Functions'
 description:
   'In this module, you will learn about the most important helper functions.'
 prev: /module2
