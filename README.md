@@ -4,7 +4,7 @@
 
 ## Objective
 
-Learn how to use the Neotoma2 R package [here](http://open.neotomadb.org/neotoma_workshop/)
+Learn how to use the Neotoma2 R package [here](https://open.neotomadb.org/neotoma_workshop/)
 
 ## Contributors
 
