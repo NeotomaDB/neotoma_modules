@@ -8,13 +8,11 @@ type: chapter
 id: 2
 ---
 
-<exercise id="0" title="Introduction">
+<exercise id="0" title="Introduction" type="slides">
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTCB947TF8imDLr7lIm6FgoctRuRSkz2nsymFNbp1DglVzCuEQv2iyYZeAoKCfXEhCyzRFvl8Ec3UtK/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<slides source="chapter2_01_introduction">
 
-
-
-</exercise>
+</slides>
 
 <exercise id="1" title="get_sites()">
 
@@ -85,7 +83,7 @@ A single `site` object has a lot of data.  You can access a site's data using `$
 site[[1]]$siteid
 ```
 
-![gif]()
+![gif](https://github.com/NeotomaDB/neotoma_workshop/blob/main/static/module2/siteatt.gif?raw=true)
 
 Some of the fields you can access are:
 ```markdown
@@ -131,76 +129,39 @@ Getting the datasets by id is the easiest call, you can also pass a vector of ID
 
 **Warning** `get_datasets()` does not take `sitename` or `siteid` as inputs, if you wish to use those you can chain `get_sites()` and `get_datasets()`.
 
-```{r getdatasetsbyid}
-# Getting datasets by ID
-my_datasets <- get_datasets(c(5, 10, 15, 20))
-my_datasets
-```
+![gif](https://github.com/NeotomaDB/neotoma_workshop/blob/main/static/module2/get_datasets.gif?raw=true)
 
-You can also retrieve datasets by type directly from the API.
+Although we cannot `get_datasets()`pass the `sitename` argument, we can pass a `sites` object. That way, we can chain filtered options:
 
-```{r getdatasetsbytype}
-# Getting datasets by type
-my_pollen_datasets <- get_datasets(datasettype = "pollen", limit = 25)
-my_pollen_datasets
-```
+![gif](https://github.com/NeotomaDB/neotoma_workshop/blob/main/static/module2/get_datasets2.gif?raw=true)
 
-It can be computationally intensive to obtain the full set of records for `sites` or `datasets`. By default the `limit` for all queries is `25`.  The default `offset` is `0`.  To capture all results it is possible to add `limit=99999999` or some similarly high number.  **However**, this is hard on the Neotoma servers.  Best practice is to loop through results, using `limit` and `offset`, for example, in a `while` loop.  In a result set of 100 records, the `limit`, when `offset` is 0 (the default), ensures that only the first 25 records are returned.  Keeping the `limit` at 25, and increasing the `offset` to 25 would give us the next 25 records.
+Try it out!!
 
-We can use that in a `while` loop in R in the following way:
+<codeblock id="02_07">
 
-```{r searchOffset, eval=FALSE}
-run = TRUE
-offset <- 0
-while(run) {
-  sites <- get_sites(offset=offset, limit = 500)
-  if(length(sites) == 0) {
-    run = FALSE
-  }
-  if(exists('allSites')) {
-    allSites <- c(allSites, sites)
-  } else {
-    allSites <- sites
-  }
-  offset <- offset + 500
-}
-```
+</codeblock>
 
-It can be computationally intensive to obtain the full set of records for `sites` or `datasets`. By default the `limit` for all queries is `25`.  The default `offset` is `0`.  To capture all results it is possible to add the `limit=99999999` or some similarly high number.  **However**, this is hard on the Neotoma servers.  Best practice is to loop through results, you can do that automatically using the `all_data=TRUE` argument.
+You can also retrieve datasets by type directly from the API. You only need to use the argument `datasettype`
 
-We can use that `all_data=TRUE` in R in the following way:
+![gif](https://github.com/NeotomaDB/neotoma_workshop/blob/main/static/module2/pollen.gif?raw=true)
 
-```{r all_data, eval=FALSE}
-allSites <- get_sites(all_data = TRUE)
-allSites
- 
-```
+Even better, you can also use the `loc` argument, which takes a bounding box or a geoJson string.
 
-Following this  can see that the total sites returned is equal to the total number of sites in Neotoma.
+![gif](https://github.com/NeotomaDB/neotoma_workshop/blob/main/static/module2/loc.gif?raw=true)
 
-You can get the coordinates to create a GeoJson bounding box from [here](https://geojson.io/#map=2/20.0/0.0), or you can use pre-existing objects within R, for example, country-level data within the `spData` package:
+You can also mix arguments, get datasets from a specific type and location. Try it yourself here!
 
-Accessing datasets by bounding box:
+<codeblock id="02_08">
 
-```{r boundingBox}
-brazil <- '{"type": "Polygon", 
-            "coordinates": [[
-                [-73.125, -9.102],
-                [-56.953, -33.138],
-                [-36.563, -7.711],
-                [-68.203, 13.923],
-                [-73.125, -9.102]
-              ]]}'
-# We can make the geojson a spatial object if we want to use the
-# functionality of the `sf` package.
-brazil_sf <- geojsonsf::geojson_sf(brazil)
-brazil_datasets <- get_datasets(loc = brazil_sf)
-brazil_datasets
-```
+</codeblock>
 
-Now we have an object called `brazil_datasets` that contains `r length(brazil_datasets)`.  
+It can be computationally intensive to obtain the full set of records for `sites` or `datasets`. 
+By default the `limit` for all queries is `25`.  
 
-You can plot these findings!
+To capture all results it is best practice to loop through results, using `limit` and `offset`, for example, in a `while` loop or with the `all_data=True` argument.
+
+To create the GeoJson coordinates bounding box use this [site](https://geojson.io/), or you can use pre-existing objects within R, for example, country-level data within the `spData` package.
+
 
 </exercise>
 
