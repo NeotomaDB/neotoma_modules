@@ -178,4 +178,10 @@ In the following example, we use the `samples()` helper function.
 
 ![gif](https://github.com/NeotomaDB/neotoma_workshop/blob/main/static/module2/downloads.gif?raw=true)
 
+
+Try it out! 
+<codeblock id="02_09">
+
+</codeblock>
+
 </exercise>

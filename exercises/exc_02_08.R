@@ -1,6 +1,5 @@
 # Load libraries
 suppressMessages(library(neotoma2))
-suppressMessages(library(dplyr))
 
 # Location Polygon 
 cz <-'{"type": "Polygon",
