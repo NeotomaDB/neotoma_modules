@@ -19,7 +19,7 @@ export default ({ data }) => {
             <Logo className={classes.logo} aria-label={siteMetadata.title} />
             <section>
 
-                <h1 className={classes.subtitle}><center>Welcome to EarthCube Interactive Workshops!</center></h1>
+                <h1 className={classes.subtitle}><center>Welcome to Neotoma2 R!</center></h1>
                 <div className={classes.introduction}>
                 <p></p>
 

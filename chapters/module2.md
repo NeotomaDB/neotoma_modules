@@ -13,6 +13,11 @@ id: 2
 
 Metadata regarding site
 
+<codeblock id="02_01">
+
+
+</codeblock>
+
 </exercise>
 
 <exercise id="2" title="get_datasets()">
