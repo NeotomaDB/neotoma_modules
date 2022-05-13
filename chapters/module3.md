@@ -203,7 +203,7 @@ For example, we may want to select all sites in a region, and then subset those 
 
 See it in action:
 
-![img](https://github.com/NeotomaDB/neotoma_workshop/blob/main/static/module3/taxa.gif?raw=true)
+![img](https://github.com/NeotomaDB/neotoma_workshop/blob/main/static/module3/filter.gif?raw=true)
 
 The `filter()` function takes as the first argument, a `sites` object, followed by the criteria we want to use to filter. 
 `filter()` is inspired by the power of `dplyr::filter()` function and can filter by any element that exists within a `sites` object.
@@ -212,25 +212,81 @@ The `filter()` function takes as the first argument, a `sites` object, followed 
 
 As you could see, `filter()` works with boolean operators: `<`, `>` or `==`, `!=`. Datasettype has to be of type string, while the other terms must be numeric.  If you need to filter by the same argument, let's say, you need to filter "geochronologic" and "pollen datatypes, then you will also make use of `&` and `|` operators.
 
+<codeblock id="03_12">
+
+Remember you can also do:
+```
+cz_po_ds <- cz_ds %>% filter(datasettype == "pollen")
+```
+
+</codeblock>
 
 </exercise>
 
 <exercise id="7" title="getids()">
 
+Sometimes, you might only need a dataframe that contains the IDs of `sites`, `datasets` and `collunits`
+
+In those cases, `getids()` has your back. You can then retrieve a particular column by using the dataframe properties.
+
+![img](https://github.com/NeotomaDB/neotoma_workshop/blob/main/static/module3/getids.gif?raw=true)
+
+Try it yourself!
+
+<codeblock id="03_13">
+
+
+</codeblock>
 
 </exercise>
 
 <exercise id="8" title="summary()">
 
+Similar to `getids()`, the `summary()` function provides some detail regarding our sites object. In this case, it provides the `siteid`, `sitename`, `collunitname` and a count of how many `chronologies` and `datasets` are associated to it. It also says what type of datasets in the `sites` object.
+Since it is also a `dataframe`, you can apply **dplyr** functions on it.
+
+![img](https://github.com/NeotomaDB/neotoma_workshop/blob/main/static/module3/summary.gif?raw=true)
+
+Try it yourself!
+
+<codeblock id="03_14">
+
+
+</codeblock>
 
 </exercise>
 
-<exercise id="9" title="coordinaes()">
+<exercise id="9" title="coordinates()">
 
+If you extract all datasets that belong to a specific datasettype, you might wonder where they are all located. One way to find out, is by extracting their coordinates and plotting them with your favourite mapping library. To extract the coordinates, you can use the `coordinates()` function.
+
+See it in action!
+
+![img](https://github.com/NeotomaDB/neotoma_workshop/blob/main/static/module3/coordinates.gif?raw=true)
+
+<codeblock id="03_15">
+
+
+</codeblock>
 
 </exercise>
 
 <exercise id="10" title="plotLeaflet()">
 
+To plot on the go, you can use `plotLeaflet()` which returns a `leaflet` object to which you can add any extra properties.
+
+See it in action!
+![img](https://github.com/NeotomaDB/neotoma_workshop/blob/main/static/module3/plotLeaflet.gif?raw=true)
+
+If executed in a terminal, this would open the following browser [window](file:///private/var/folders/x2/phk11_6n0m93p5fths7dty480000gn/T/RtmpfTtrI2/viewhtml27e77f72c7e2/index.html)
+
+If you do it in an .Rmd document, you will see the map rendered to your file. In this tutorial, you will see it print below.
+
+Try it yourself!
+
+<codeblock id="03_16">
+
+
+</codeblock>
 
 </exercise>
