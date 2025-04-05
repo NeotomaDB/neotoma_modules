@@ -1,6 +1,11 @@
 # EarthCube Workshops
+<!-- badges: start -->
+
+[![lifecycle](https://img.shields.io/badge/lifecycle-stable-orange.svg)](https://www.tidyverse.org/lifecycle/#stable)
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/NeotomaDB/neotoma_workshop/binder)
+
+<!-- badges: end -->
 
 ## Objective
 
